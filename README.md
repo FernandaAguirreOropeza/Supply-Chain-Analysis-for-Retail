@@ -29,7 +29,7 @@ Build and evaluate the models
 Create the inventory plan
 
 
-# 1. Problem statement and objective
+# 1. PROBLEM STATEMENT AND OBJECTIVE
 
 Inventory decisions matter because both extremes are costly. When stock is too low, the company risks losing sales and affecting the customer experience. When stock is too high, working capital remains tied up in products that are not moving fast enough.
 
@@ -39,7 +39,7 @@ How can historical sales data help improve inventory planning for the most impor
 
 The objective is to build a forecasting workflow that estimates next-month demand and turns that estimate into a practical inventory plan. In other words, the purpose is not only to describe what happened in the past. The purpose is to support a better operational decision for the next planning cycle.
 
-# 2. Justification
+# 2. JUSTIFICATION
 
 A supervised regression approach makes sense because the decision depends on estimating future demand. Monthly sales usually contain signals from recent history, and those signals can be converted into more informed replenishment decisions.
 
@@ -53,7 +53,7 @@ At this stage, the goal is simply to confirm that the dataset is usable for the 
 
 For this project, the key variable is units_sold, because it represents demand. The date field is also essential, since the analysis will later be organized at the monthly level.
 
-#4. CHECK MISSING VALUES AND DUPLICATES
+# 4. CHECK MISSING VALUES AND DUPLICATES
 
 We convert the date field, keep the rows that are valid for this analysis, and remove duplicates if they exist.
 
@@ -94,7 +94,7 @@ The monthly demand lines show clearly that demand is not constant. Some products
 
 That is exactly why predictive analytics is useful here. A fixed replenishment rule would likely ignore those differences, while a data-driven approach can adapt more intelligently to recent sales behavior.
 
-# 11. Feature engineering for predictive analytics
+# 11. FEATURE ENGINEERING FOR PREDICTIVE ANALYTICS 
 
 Predictive analytics becomes more useful when the dataset captures recent demand behavior. We create lag variables, rolling averages, rolling standard deviations, and calendar variables. These features help summarize what has been happening recently and give the model a better basis for estimating future demand and uncertainty.
 
@@ -151,7 +151,7 @@ It is necessary to know the exact dates of reordering products according to the 
 # 20. SAFETY STOCK LEVELS
 Safety stock buffer is what makes the reorder point realistic instead of risky. It helps to be aware of how many products are in stock in order to protect against uncertainty. Since Apple launches new products every year, the stock buffer is every time lower for the products that are moving everytime more aside in order for the new products to enter, which is why the olderst generations of products are the lowest.
 
-# 21. Executive inventory plan
+# 21. EXECUTIVE INVENTORY PLAN
 
 This table shows a summary of the ABC analysis, the reorder points and the safety stock, as well as many other important information for a supply chain manager to understand what happens with the products and be aware of the next steps
 
@@ -159,7 +159,7 @@ This table shows a summary of the ABC analysis, the reorder points and the safet
 
 Rather than adding more technical detail, it highlights the main decisions: where forecast demand is concentrated, which categories require the largest replenishment effort, which product-color combinations deserve closer attention, and how the selected model performed.
 
-# 23. Final conclusion
+# 23. FINAL CONCLUSION
 
 It is undeniable that for Apple, as for any company, demand is volatile, especially for an innovative and well-established one. In this project, we presented a comprehensive supply chain analysis, relying not only on the analysis of historical sales data and the construction of predictive models, but also on a rigorous framework. This allowed us to estimate future demand trends for flagship products and evaluate the model's performance using error metrics such as mean absolute error (MAE) and root mean square error (RMSE). To do this, we selected the three best-performing products in each category offered by Apple, focusing on the most important products for the coming year, which enabled a more strategic and business-oriented analysis.
 
